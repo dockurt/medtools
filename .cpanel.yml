@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/kaviodev/medtools/public_html
-    - /bin/cp dietrx.php $DEPLOYPATH
-    - /bin/cp dietrx-practice.php $DEPLOYPATH
