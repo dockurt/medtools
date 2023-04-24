@@ -158,7 +158,7 @@ if ($patientData['ter'] != $ter) {
 }
 
 //generate carbs requirement by multiplying TER by 0.6
-$carbs = 0.6 * $ter;
+$carbs = (0.6 * $ter)/4;
 //round off carbs to nearest 0 or 5
 $carbs = round($carbs / 5) * 5;
 //check if carbs answered is correct
@@ -170,7 +170,7 @@ if ($patientData['carbs'] != $carbs) {
 
 
 //generate protein requirement by multiplying TER by 0.15
-$protein = 0.15 * $ter;
+$protein = (0.15 * $ter)/4;
 //round off protein to nearest 0 or 5
 $protein = round($protein / 5) * 5;
 //check if protein answered is correct
@@ -183,7 +183,7 @@ if ($patientData['protein'] != $protein) {
 //generate fat requirement by multiplying TER by 0.25
 $fat = 0.25 * $ter;
 //round off fat to nearest 0 or 5
-$fat = round($fat / 5) * 5;
+$fat = (round($fat / 5) * 5)/9;
 //check if fat answered is correct
 if ($patientData['fat'] != $fat) {
     echo "Fat (g) is incorrect. You answered ". $patientData['fat']. "The correct answer is: " . $fat . "<br>";
