@@ -181,9 +181,9 @@ if ($patientData['protein'] != $protein) {
 }
 
 //generate fat requirement by multiplying TER by 0.25
-$fat = 0.25 * $ter;
+$fat = (0.25 * $ter)/9;
 //round off fat to nearest 0 or 5
-$fat = (round($fat / 5) * 5)/9;
+$fat = (round($fat / 5) * 5);
 //check if fat answered is correct
 if ($patientData['fat'] != $fat) {
     echo "Fat (g) is incorrect. You answered ". $patientData['fat']. "The correct answer is: " . $fat . "<br>";
